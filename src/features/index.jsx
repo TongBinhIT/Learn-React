@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TodoList from '../components/TodoList';
+import TodoList from './Todo/components/TodoList';
 
 TodoFeature.propTypes = {
+    TodoList: PropTypes.array,
     
 };
 
@@ -24,9 +25,11 @@ function TodoFeature(props) {
             status : 'new'
         },
     ];
+
+
     return (
         <div>
-            <h3>Tod0 List</h3>
+            <h3>Todo List</h3>
             <TodoList todoList={todoList} /> 
         </div>
     );
